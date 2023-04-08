@@ -23,9 +23,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - run: ls -l
-      # - name: Deploy to Azure
-      #   uses: TravisSpomer/deploy-to-azure-storage@v1.4.0
-      #   with:
-      #     source-path: /
-      #     sas-url: ${{ secrets.DEPLOY_SAS_URL }}
+      # - run: ls -l
+      - name: Deploy to Azure
+        uses: TravisSpomer/deploy-to-azure-storage@v1.4.0
+        with:
+          source-path: .
+          sas-url: ${{ secrets.DEPLOY_SAS_URL }}
